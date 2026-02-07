@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.main{
+    width: 100vw;
+    height:100vh;
+    background-image: url('Serene\ blue\ sky\ with\ fluffy\ clouds.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    width:420px;
+    height:450px;
+    background-color: rgba(255, 255, 255,0.30);
+    border-radius: 20px;
+    backdrop-filter: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.container .hero{
+    width:40px;
+    height:40px;
+}
+.container p{
+    font-size: 20px;
+}
+.container a{
+    text-decoration: none;
+    color:black;
+    font-size: 18px;
+}
+input{
+    width: 60%;
+    height:7%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
