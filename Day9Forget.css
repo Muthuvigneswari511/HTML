@@ -1,0 +1,111 @@
+/* https://www.swiggy.com/ */
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.main{
+    width: 100%;
+    height:100vh;
+    background-image: url('Serene\ blue\ sky\ with\ fluffy\ clouds.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: sans-serif;
+}
+.container{
+    width:350px;
+    height: 300px;
+    background-color: rgba(255, 255, 255, 0.30);
+     display: flex;
+     flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0px 8px 20px rgba(88, 81, 81, 0.22);
+}
+.for{
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 0.6px;
+}
+.container input{
+    
+    width:80%;
+    height: 41px;
+    border-radius: 5px;
+    border: none;
+    font-size: 20px;
+    padding-left: 5px;
+}
+input:focus{
+    outline: 2px solid rgb(151, 150, 150);
+}
+
+.container button{
+    background: linear-gradient(120deg, #3d77f4, #5f9cff);
+    background-color: #3d77f4;
+    color: white;
+    border: none;
+    width: 80%;
+    height: 42px;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.30s ease;
+    box-shadow: 1px 5px 20px rgba(61, 119, 244, 0.25);
+    padding: 3px;
+}
+button:hover{
+        transform:translateY(-2px);
+        box-shadow: 0 12px 28px rgba(61, 119, 244, 0.4);
+    background: linear-gradient(135deg, #3569d6, #4f8af0);  
+}
+button:active {
+    transform: scale(0.97);
+    box-shadow: 0 6px 15px rgba(61, 119, 244, 0.3);
+}
+button:focus{
+    outline:none;
+    box-shadow: 0 0 3px rgba(61,119,244,0.4);
+}
+button{
+    position: relative;
+    overflow: hidden;
+}
+
+button::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    transform: translate(-50%,-60%);
+    transition: width 0.6s ease, height 0.6s ease;
+    top: 50%;
+    left: 50%;
+}
+
+button:active::before {
+    width: 200%;
+    height: 300%;
+}
+
+
+@media (max-width:760px){
+    .container button{
+        width:65%;
+        font-size: 14px;
+        height:30px;
+    }
+}
+.container .a{
+    text-decoration: none;
+    color: black;
+    font-size: 17px;
+}
