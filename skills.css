@@ -73,35 +73,88 @@ height: 10vh;
 .nav a:hover::before{
     opacity: 1;
 }
+/* FRONTEND SKILLS CONTAINER */
 .frontend{
-    width: 700px;
-    padding: 25px;
-    background-color: rgb(243, 17, 17);
-    border-radius: 12px;
+    position: absolute;
+    left: 0px;
+    top: 120px;
+
+    width: 720px;
+    padding: 35px 45px;
 
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    /* glassmorphism */
+    background: rgba(255,255,255,0.12);
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+
+    border: 1px solid rgba(255,255,255,0.25);
+
+    /* rounded only right side */
+    border-radius: 18px 120px 120px 18px;
+
+    box-shadow:
+        0 20px 45px rgba(0,0,0,0.45),
+        inset 0 0 0.5px rgba(255,255,255,0.4);
+
+    /* animation */
+    animation: slideFromLeft 1.4s ease forwards;
+   
 }
 
-/* each skill box */
+/* SLIDE ANIMATION */
+@keyframes slideFromLeft{
+    from{
+        transform: translateX(-3000px);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* SKILL CARD */
 .skill{
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
+
+    padding: 15px;
+    border-radius: 18px;
+
+    transition: all 0.4s ease;
 }
 
-/* same size for all icons */
+/* ICON */
 .skill img{
-    width: 90px;
-    height: 120px;
+    width: 85px;
+    height: 85px;
     object-fit: contain;
+
+    filter: drop-shadow(0 8px 14px rgba(0,0,0,0.35));
+    transition: transform 0.4s ease;
 }
 
-/* skill name */
+/* TEXT */
 .skill p{
-    color: white;
+    color: #ffffff;
     font-size: 14px;
     font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/* HOVER EFFECT */
+.skill:hover{
+    background: rgba(255,255,255,0.15);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+    transform: translateY(-8px);
+}
+
+.skill:hover img{
+    transform: scale(1.12) rotate(3deg);
 }
