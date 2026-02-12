@@ -1,29 +1,264 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: inter,regular;
 }
-.header{
+
+body {
+    font-family: "Inter", sans-serif;
+
+}
+
+.full {
+    flex-wrap: wrap;
+}
+
+.header {
     width: 100%;
-    height: 6vh;
+    height: 9vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
 }
-.header .nav{
+
+.header .nav {
     width: 70%;
-    height:6vh;
+    height: 9vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.dropdown {
+    position: relative;
+
+}
+
+/* Yellow Button */
+.img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 170px;
+    height: 40px;
+    background: rgb(255, 229, 31);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* Arrow animation */
+.arrow {
+    width: 14px;
+    transition: transform 0.30s ease-in-out;
+}
+
+/* 🔥 Hover → Arrow Up */
+.dropdown:hover .arrow {
+    transform: rotate(180deg);
+}
+
+/* Dropdown hidden state */
+.dropdown-menu {
+    position: absolute;
+    top: 55px;
+    left: 0;
+    width: 230px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+
+    transition: all 0.25s ease;
+}
+
+/* 🔥 Hover → Show dropdown */
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Items */
+.item {
+    padding: 14px;
+}
+
+.item:hover {
+    background: #f1f3f6;
+}
+
+.search-box {
+    width: 650px;
+    height: 43px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    padding: 12px;
+    border: 1px solid rgb(2, 87, 244);
+    border-radius: 10px;
+}
+
+.search-box img {
+    width: 25px;
+    height: 38px;
+    border: none;
+    cursor: pointer;
+}
+
+input {
+    width: 400px;
+    height: 40px;
+    outline: none;
+    border: none;
+}
+
+.nav-menus {
+    width: 400px;
+    height: 43px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.login-menu {
+    width: 100px;
+    height: 43px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.more-menu {
+    width: 80px;
+    height: 43px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.cart-menu {
+    width: 70px;
+    height: 43px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.main {
+    width: 100%;
+    height: 300vh;
+    background-color: #f1f3f6e2;
+}
+
+.location {
+    width: 100%;
+    height: 33px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.img{
+
+.location-center {
+    width: 70%;
+    height: 30px;
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
     align-items: center;
-    width:170px;
-    height: 45px;
-    background-color: rgb(255, 229, 31);
-    border-radius: 10px;
+    gap: 6px;
 }
-.img:hover{
+
+.location-not-set {
+    display: inline;
+    font-size: 14px;
+    color: rgb(31, 31, 31);
+}
+
+.delivery-location {
+    color: rgb(18, 84, 231);
+    font-size: 14px;
 
 }
+
+.right-arrow {
+    transform: rotate(270deg);
+}
+
+.full-section {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.banner {
+    width: 70%;
+    height: 250px;
+    background-color: white;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:20px;
+    overflow: hidden;
+    
+}
+
+/* Track (moving container) */
+.banner-track {
+    display: flex;
+    gap: 15px;
+    
+     /* 3 images = 100% × 3 */
+    height: 100%;
+    animation: slideMove 12s infinite;
+    animation-duration: 2;
+    animation-direction: alternate;
+}
+.banner-track img{
+     width: calc(100%/3);
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+   
+ flex-shrink: 0;
+}
+
+
+@keyframes slideMove {
+
+    0%   { transform: translateX(0); }
+
+    15%  { transform: translateX(-33.33%); }
+
+    30%  { transform: translateX(-66.66%); }
+
+    45%  { transform: translateX(-100%); }
+
+    60%  { transform: translateX(-133.33%); }
+
+    75%  { transform: translateX(-166.66%); }
+
+    100% { transform: translateX(0); }
+}
+

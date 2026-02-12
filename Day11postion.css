@@ -1,0 +1,35 @@
+.box1{
+    width: 200px;
+    height: 200px;
+    background-color: yellow;
+    position:relative;
+    z-index: 0;
+}
+.box2{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgb(108, 108, 235);
+}
+.box3{
+    width: 200px;
+    height: 200px;
+    background-color: rgb(48, 177, 87);
+}
+.box4{
+    width: 200px;
+    height: 200px;
+    background-color: rgb(208, 153, 33);
+}
+.box5{
+    width: 200px;
+    height: 200px;
+    background-color: rgb(232, 232, 207);
+}
+.box6{
+     width: 200px;
+    height: 200px;
+    background-color:greenyellow
+}
