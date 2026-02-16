@@ -4,6 +4,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Segoe UI", sans-serif;
+    overflow: hidden;
 }
 
 /* BACKGROUND */
@@ -74,12 +75,23 @@ height: 10vh;
     opacity: 1;
 }
 /* FRONTEND SKILLS CONTAINER */
+.frontend-div{
+    width: 100%;
+    height: 230px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+    gap:30px;
+}
 .frontend{
     position: absolute;
     left: 0px;
-    top: 120px;
+    top: 30px;
 
     width: 720px;
+    
     padding: 35px 45px;
 
     display: flex;
@@ -88,23 +100,53 @@ height: 10vh;
 
     /* glassmorphism */
     background: rgba(255,255,255,0.12);
-    backdrop-filter: blur(30px);
-    -webkit-backdrop-filter: blur(30px);
+    backdrop-filter: blur(80px);
+    
 
     border: 1px solid rgba(255,255,255,0.25);
 
     /* rounded only right side */
-    border-radius: 18px 120px 120px 18px;
+    border-radius: 0px 120px 120px 0px;
 
     box-shadow:
-        0 20px 45px rgba(0,0,0,0.45),
+        0 10px 45px rgba(0,0,0,0.45),
         inset 0 0 0.5px rgba(255,255,255,0.4);
 
     /* animation */
-    animation: slideFromLeft 1.4s ease forwards;
+    animation: slideFromLeft 1.5s ease forwards;
+    
    
 }
+.content{
+    position: absolute;
+    top:90px;
+    left: 830px;   /* 🔥 this creates space from box */
+    
+    
+}
 
+.content h1{
+     
+    animation: anime 1.8s ease forwards;
+    animation-delay: 0.4s;
+    visibility: hidden;
+     background: linear-gradient(to bottom, #beff33 0%, #ff99cc 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+    
+}
+@keyframes anime {
+    from{
+        transform: translateY(40px);
+        opacity: 0;
+        visibility: visible;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+}
 /* SLIDE ANIMATION */
 @keyframes slideFromLeft{
     from{
@@ -124,10 +166,10 @@ height: 10vh;
     align-items: center;
     gap: 12px;
 
-    padding: 15px;
+    padding: 12px;
     border-radius: 18px;
 
-    transition: all 0.4s ease;
+    transition: all 0.4s ease-in-out;
 }
 
 /* ICON */
@@ -140,13 +182,7 @@ height: 10vh;
     transition: transform 0.4s ease;
 }
 
-/* TEXT */
-.skill p{
-    color: #ffffff;
-    font-size: 14px;
-    font-weight: 600;
-    letter-spacing: 0.5px;
-}
+
 
 /* HOVER EFFECT */
 .skill:hover{
@@ -156,5 +192,173 @@ height: 10vh;
 }
 
 .skill:hover img{
-    transform: scale(1.12) rotate(3deg);
+    transform: scale(1.12) rotate(1deg);
+}
+.backend-div{
+    width: 100%;
+    height: 230px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+    gap:30px;
+}
+.content2{
+    position: absolute;
+    top:90px;
+    left: 250px;   /* 🔥 this creates space from box */
+    
+    
+}
+.content2 h1{
+     
+    animation: anime 1.8s ease forwards;
+    background-clip: blur(10px);
+    animation-delay: 0.4s;
+    visibility: hidden;
+    background-image: linear-gradient(to bottom, rgb(244, 81, 81), rgb(208, 238, 247));
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+    
+}
+.backend{
+    position: absolute;
+    right: 0px;
+    top: 20px;
+
+    width: 720px;
+    height: 190px;
+    padding: 35px 45px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    /* glassmorphism */
+    background: rgba(255,255,255,0.12);
+    backdrop-filter: blur(80px);
+    
+
+    border: 1px solid rgba(255,255,255,0.25);
+
+    /* rounded only right side */
+    border-radius: 120px 0px 0px 120px;
+
+    box-shadow:
+        0 20px 45px rgba(0,0,0,0.45),
+        inset 0 0 0.5px rgba(255,255,255,0.4);
+
+    /* animation */
+    animation: slideFromRight 1.5s ease forwards;
+   
+}
+.s .py{
+    background-color: white;
+}
+.s{
+
+    padding: 24px;
+}
+.s img{
+    width: 75px;
+    height: 66px;
+    border-radius: 6px;
+}
+@keyframes slideFromRight{
+    from{
+        transform: translateX(3000px);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+.database-div{
+    width: 100%;
+    height: 230px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+    gap:30px;
+}
+.database{
+    position: absolute;
+    left: 0px;
+    top: 30px;
+
+    width: 720px;
+    
+    padding: 35px 45px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    /* glassmorphism */
+    background: rgba(255,255,255,0.12);
+    backdrop-filter: blur(80px);
+    
+
+    border: 1px solid rgba(255,255,255,0.25);
+
+    /* rounded only right side */
+    border-radius: 0px 120px 120px 0px;
+
+    box-shadow:
+        0 10px 45px rgba(0,0,0,0.45),
+        inset 0 0 0.5px rgba(255,255,255,0.4);
+
+    /* animation */
+    animation: slideFromLeft 1.5s ease forwards;
+    
+   
+}
+.content3{
+    position: absolute;
+    top:90px;
+    left: 830px;   /* 🔥 this creates space from box */
+    
+    
+}
+
+.content3 h1{
+     
+    animation: anime 1.8s ease forwards;
+    animation-delay: 0.4s;
+    visibility: hidden;
+     background: linear-gradient(to bottom, #82f89f 3%, #f78585 140%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+    
+}
+@keyframes anime {
+    from{
+        transform: translateY(40px);
+        opacity: 0;
+        visibility: visible;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+}
+/* SLIDE ANIMATION */
+@keyframes slideFromLeft{
+    from{
+        transform: translateX(-3000px);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+.database .y img{
+    width: 70px;
+    height: 70px;
 }
