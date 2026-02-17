@@ -13,6 +13,7 @@ body {
     background-size: cover;
 }
 
+
 .nav{
 height: 10vh;
     width: 100%;
@@ -72,4 +73,82 @@ height: 10vh;
 
 .nav a:hover::before{
     opacity: 1;
+}
+.centre-container{
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    
+}
+.project{
+    color: #ffffff;
+    width: 390px;
+    height: 390px;
+   background: rgba(255,255,255,0.12);
+    backdrop-filter: blur(80px);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.proj1{
+    width: 320px;
+    height: 360px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    
+}
+.project1{
+    transition: all 0.5s ease;
+    
+}
+.project1:hover{
+    box-shadow: 2px 8px 5px rgba(255,255,255,0.10);
+    
+    
+}
+ .project1 h2{
+    background: linear-gradient(to top,#f19cd7  0%, #beff33 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+.project2 h2{
+     background: linear-gradient(to left,#ecc697  0%, #69dbf1 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+.project3 h2{
+     background: linear-gradient(to left,#ce62f9  0%, #64e664 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+.image{
+     color: white;
+    background-color: #129bf5;
+    font-weight: 500;
+    padding: 10px 14px;
+    border: none;
+    border-radius: 7px;
+    font-size: 16px;
+    transition: all 0.6s ease ;
+}
+.image:hover{
+   color: white;
+    background-color: rgb(130, 125, 125);
+    transform: translateX(2px);
+}
+.download{
+    color: white;
+    background-color: #1fb462;
+    padding: 8px 14px;
+    border: none;
+    border-radius: 7px;
+    font-size: 16px;
 }
